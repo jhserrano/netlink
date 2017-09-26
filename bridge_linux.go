@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"syscall"
 
-	"github.com/verm666/netlink/nl"
+	"github.com/jhserrano/netlink/nl"
 )
 
 // BridgeVlanList gets a map of device id to bridge vlan infos.

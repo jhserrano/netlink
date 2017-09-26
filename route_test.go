@@ -371,7 +371,7 @@ func TestRouteExtraFields(t *testing.T) {
 
 	intMetricToValue := map[RouteMetricType]int{}
 
-	for m := range(IntRouteMetrics) {
+	for m := range IntRouteMetrics {
 		intMetricToValue[m] = len(intMetricToValue)
 	}
 
@@ -392,14 +392,14 @@ func TestRouteExtraFields(t *testing.T) {
 	route := Route{
 		LinkIndex:  link.Attrs().Index,
 		Dst:        dst,
-		IntMetrics: intMetrics,
 		Src:        src,
 		Scope:      syscall.RT_SCOPE_LINK,
-		StrMetrics: strMetrics,
 		Priority:   13,
 		Table:      syscall.RT_TABLE_MAIN,
 		Type:       syscall.RTN_UNICAST,
 		Tos:        14,
+		IntMetrics: intMetrics,
+		StrMetrics: strMetrics,
 	}
 	if err := RouteAdd(&route); err != nil {
 		t.Fatal(err)

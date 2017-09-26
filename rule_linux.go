@@ -5,7 +5,7 @@ import (
 	"net"
 	"syscall"
 
-	"github.com/verm666/netlink/nl"
+	"github.com/jhserrano/netlink/nl"
 )
 
 // RuleAdd adds a rule to the system.

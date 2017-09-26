@@ -11,3 +11,7 @@ before_script:
   - sudo modprobe nf_conntrack_ipv6
 install:
   - go get github.com/vishvananda/netns
+
+branches:
+  only:
+  - fea-rtax-testable
